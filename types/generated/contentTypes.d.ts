@@ -794,6 +794,7 @@ export interface ApiCardCollectionCardCollection extends Schema.CollectionType {
     singularName: 'card-collection';
     pluralName: 'card-collections';
     displayName: 'Card Collection';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -801,7 +802,7 @@ export interface ApiCardCollectionCardCollection extends Schema.CollectionType {
   attributes: {
     sectionTitle: Attribute.String;
     sectionDescription: Attribute.Text;
-    Card: Attribute.Component<'cards.card', true>;
+    cards: Attribute.Component<'cards.card', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

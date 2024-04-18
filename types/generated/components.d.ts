@@ -13,10 +13,22 @@ export interface CardsCard extends Schema.Component {
   };
 }
 
+export interface TextText extends Schema.Component {
+  collectionName: 'components_text_texts';
+  info: {
+    displayName: 'text';
+    icon: 'brush';
+  };
+  attributes: {
+    shortText: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'cards.card': CardsCard;
+      'text.text': TextText;
     }
   }
 }
