@@ -788,6 +788,38 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiCardCollectionCardCollection extends Schema.CollectionType {
+  collectionName: 'card_collections';
+  info: {
+    singularName: 'card-collection';
+    pluralName: 'card-collections';
+    displayName: 'Card Collection';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    sectionTitle: Attribute.String;
+    sectionDescription: Attribute.Text;
+    Card: Attribute.Component<'cards.card', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::card-collection.card-collection',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::card-collection.card-collection',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCategoryCategory extends Schema.CollectionType {
   collectionName: 'categories';
   info: {
@@ -877,6 +909,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::card-collection.card-collection': ApiCardCollectionCardCollection;
       'api::category.category': ApiCategoryCategory;
       'api::restaurant.restaurant': ApiRestaurantRestaurant;
     }
