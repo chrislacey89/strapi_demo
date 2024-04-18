@@ -8720,6 +8720,11 @@ statuses@2.0.1, statuses@^2.0.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
 
+strapi-plugin-website-preview@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-website-preview/-/strapi-plugin-website-preview-1.0.8.tgz#1f8a9b48a83fd76ac88ffe1b0356b87ef43038e7"
+  integrity sha512-f8cJxTrZZF7DEcU+3sB5FVUnlTt5Y9Hvn0cd/wy94j+SJKR+emWscN6/ylrvBKUveMhIeSa3EYqwLE9AOKQjVQ==
+
 stream-chain@2.2.5, stream-chain@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/stream-chain/-/stream-chain-2.2.5.tgz#b30967e8f14ee033c5b9a19bbe8a2cba90ba0d09"
