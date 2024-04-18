@@ -5,22 +5,25 @@ export interface CardsCard extends Schema.Component {
   info: {
     displayName: 'Card';
     icon: 'apps';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     date: Attribute.DateTime;
+    link: Attribute.Component<'link.link', true>;
   };
 }
 
-export interface TextText extends Schema.Component {
-  collectionName: 'components_text_texts';
+export interface LinkLink extends Schema.Component {
+  collectionName: 'components_link_links';
   info: {
-    displayName: 'text';
-    icon: 'brush';
+    displayName: 'link';
+    icon: 'briefcase';
   };
   attributes: {
-    shortText: Attribute.String;
+    linkText: Attribute.String;
+    linkUrl: Attribute.String;
   };
 }
 
@@ -28,7 +31,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'cards.card': CardsCard;
-      'text.text': TextText;
+      'link.link': LinkLink;
     }
   }
 }

@@ -2,7 +2,8 @@
   "collectionName": "components_cards_cards",
   "info": {
     "displayName": "Card",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,6 +15,12 @@
     },
     "date": {
       "type": "datetime"
+    },
+    "link": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": true,
+      "component": "link.link"
     }
   }
 }
